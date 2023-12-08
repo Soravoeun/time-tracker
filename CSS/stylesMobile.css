@@ -1,0 +1,225 @@
+@font-face {
+    font-family: RubikBold;
+    src: url("../Rubik/static/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: RubikRegular;
+    src: url("../Rubik/static/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: RubikLight;
+    src: url("../Rubik/static/Rubik-Light.ttf") format("truetype");
+}
+
+:root {
+    --card-title: 18px;
+    --global-font-family-bold: RubikBold, sans-serif;
+    --color-dark-blue: hsl(235, 46%, 20%);
+    --rounded-radius: 15px;
+    --global-font-family: RubikLight, sans-serif;
+    --color-desatured-blue: hsl(235, 45%, 61%);
+    --color-pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 14, 14);
+    color: white;
+}
+
+.card-container {
+    background-color: hsl(226, 43%, 10%);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+
+}
+
+.card-profile {
+    border-radius: var(--rounded-radius);
+    background-color: var(--color-dark-blue);
+}
+
+.card-name {
+    background-color: hsl(246, 80%, 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    column-gap: 16px;
+}
+
+.card-name img {
+    border: 3px solid white;
+    border-radius: 34px;
+    width: 68px;
+}
+
+.periode {
+    font-family: var(--global-font-family);
+    font-size: var(--card-title);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 35px;
+
+}
+
+.periode a {
+    color: var(--color-desatured-blue);
+    text-decoration: none;
+}
+
+.periode a:hover {
+    text-decoration: underline;
+}
+
+.periode a:active {
+    color: red;
+    text-decoration: underline;
+}
+
+.periode .periode--active {
+    color: white;
+}
+
+.card-activity {
+    border-radius: var(--rounded-radius);
+    background-color: var(--color-dark-blue);
+    cursor: pointer;
+    overflow: hidden;
+    z-index: auto;
+}
+
+
+.card-activity img {
+    width: 100%;
+
+}
+
+.activity {
+    background-color: var(--color-dark-blue);
+    border-radius: var(--rounded-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    transition: all 0.3s;
+    margin-top: 40px;
+    /* transform: translateY(40px); */
+
+}
+
+/* .activity:hover {
+    transform: translateY(0px);
+} */
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--card-title);
+    align-items: center;
+}
+
+.moreHoriz {
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    text-decoration: dotted;
+    background-color: transparent;
+    border: 0;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hours {
+    font-family: var(--global-font-family);
+    font-size: 30px;
+}
+
+.info {
+    display: none;
+    font-family: RubikRegular, sans-serif;
+    /* font-family: var(--global-font-family); */
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    border: 0;
+    background-color: hsl(234.71deg 36.56% 36.47%);
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.info:hover {
+    background-color: rgb(109, 111, 170);
+}
+
+.historique {
+    color: var(--color-pale-blue);
+    font-family: var(--global-font-family);
+}
+
+h2 {
+    font-family: var(--global-font-family);
+    color: hsl(236, 100%, 87%);
+}
+
+.activity-name {
+    font-family: var(--global-font-family-bold);
+    font-size: var(--card-title);
+}
+
+h4 {
+    color: hsl(244.39deg 100% 83.92%);
+    font-family: var(--global-font-family);
+}
+
+.card-activity--work {
+    background: hsl(15, 100%, 70%) url(../images/icon-work.svg) 0 -10px no-repeat;
+    background-position: right 25px top -10px;
+}
+
+.card-activity--play {
+    background: hsl(195, 74%, 62%) url(../images/icon-play.svg) 0 -10px no-repeat;
+    background-position: right 25px top -10px;
+}
+
+.card-activity--study {
+    background: hsl(348, 100%, 68%) url(../images/icon-study.svg) 0 -10px no-repeat;
+    background-position: right 25px top -10px;
+}
+
+.card-activity--exercise {
+    background: hsl(145, 58%, 55%) url(../images/icon-exercise.svg) 0 -10px no-repeat;
+    background-position: right 25px top -10px;
+}
+
+.card-activity--social {
+    background: hsl(264, 64%, 52%) url(../images/icon-social.svg) 0 -10px no-repeat;
+    background-position: right 25px top -10px;
+}
+
+.card-activity--selfCare {
+    background: hsl(43, 84%, 65%) url(../images/icon-self-care.svg) 0 -10px no-repeat;
+    background-position: right 25px top -10px;
+}
